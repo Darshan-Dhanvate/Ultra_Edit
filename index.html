@@ -4,195 +4,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First website</title>
+    <title>Download UltraEdit</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    </style>
-    <style>
-        /* declaring color variables */
-        :root {
-            --primarycolor: rgb(142, 121, 236);
-            --navfontcolor: rgb(255, 255, 255);
-            --seccolor: rgb(209, 224, 225);
-            --containercolor: rgba(188, 238, 245, 0.556);
-            --boxcolor: rgba(132, 176, 246, 0.172);
+        :root{
+            --fontcolor:#222222;
         }
-
+        @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        body{
+            background-color: white;
+            justify-items: center;
         }
 
-        body {
-            background-color: var(--seccolor);
-            font-family: "Open Sans", sans-serif;
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            font-family: 'Segoe UI';
+            background-color:rgba(200, 240, 237, 0.396);
         }
 
-        #navbar {
-            width: 100%;
-            color: var(--navfontcolor);
-            background-color: var(--primarycolor);
-            padding: 8px 10px;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 2px 3px 0px #6e6e6e;
+        .right ul {
+            display: flex;
+            gap: 30px;
         }
 
-        ul li {
+        .right ul li {
             list-style: none;
-            display: inline;
-            padding: 10px;
-            font-weight: bolder;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
         }
 
-        .container {
+        .right ul li span{
+            padding: 0 5px;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .top{
+            background-color: white;
+            height: 40vh;
+            width: 60vw;
+            display: grid;
+            grid-template-areas: "first"
+                                "second"
+                                "third";
+            justify-content: center;
+            justify-items: center;
+            margin: auto;
+            margin-top: 80px;
+        }
+
+        .item1{
+            grid-area: first;
+            font-size: 40px;
+            display: flex;
+           justify-content: center;
+        }
+        
+        .item2{
+            grid-area: second;
+            display: flex;
+            font-size: 22px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .item3{
+            grid-area: third;
             display: flex;
             justify-content: center;
-            /* Center the sections horizontally */
-            align-items: flex-start;
-            /* Align items at the start */
-            background-color: var(--containercolor);
-            padding: 20px;
         }
-
-        .section {
-            margin: 10px;
-            margin-top: 20px;
-            width: 400px;
-            height: 600px;
-            border: 2px solid var(--primarycolor);
-            border-radius: 16px;
-            text-align: center;
+        .item3 button{
+            height: 40px;
+            width: 270px;
+            background-color: #00B6D1;
+            border-radius: 5px;
+            border: none;
         }
-
-        .section1 {
-            margin-right: 180px;
-        }
-
-        .imgcontainer {
-            padding: 10px;
-            border-radius: 16px;
-        }
-
-        p {
-            margin: 10px;
-        }
-
-        h1 {
-            text-align: center;
-            font-family: "Exo 2", sans-serif;
-            padding-top: 50px;
-        }
-
-        .box {
-            border: 2px solid var(--primarycolor);
-            margin: 30px;
-            height: 200px;
-            background-color: var(--boxcolor);
-            border-radius: 15px;
-        }
-
-        a {
+        .item3 button a{
             text-decoration: none;
-            margin: 10px;
-        }
-
-        footer {
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
             color: white;
-            background-color: black;
-        }
-
-        .fixed-circle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            overflow: hidden;
-            border-radius: 50%;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .fixed-circle img {
-            width: 100%;
-            height: 70px;
-            object-fit: cover;
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <!-- navigation mark -->
-        <header>
-            <nav id="navbar">
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp">
+            </div>
+            <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Gallery</li>
-                    <li>Information</li>
+                    <li><span>Products </span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><span>Pricing </span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><span>Resources </span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><span>About us </span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+
+                    <li>security and compliance</li>
+
+                    <li><img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt=""></li>
                 </ul>
-            </nav>
-        </header>
-
-        <h1>Welcome to ZooMedia</h1>
-
-        <!-- container -->
-        <div class="container">
-            <div class=" section section1">
-                <img class="imgcontainer"
-                    src="https://img.freepik.com/premium-photo/close-up-squirrel-wooden-post_1048944-30370286.jpg?w=900"
-                    alt="squirrel" width="396">
-
-                <h2>Squirrel</h2>
-                <p>Squirrels are small to medium-sized rodents belonging to the family Sciuridae, which includes tree
-                    squirrels, ground squirrels, chipmunks, and flying squirrels. Known for their bushy tails and sharp
-                    claws, they are highly agile and excellent climbers. Squirrels primarily feed on nuts, seeds,
-                    fruits, and fungi, but some species also eat insects. They are found in various habitats, including
-                    forests, urban areas, and parks. Squirrels are known for their behavior of caching food for later
-                    use, especially during winter.</p>
             </div>
+        </nav>
+    </header>
 
-            <div class="section section2">
-                <img class="imgcontainer"
-                    src="https://img.freepik.com/free-photo/view-colorful-3d-fish-swimming-underwater_23-2150721070.jpg?t=st=1723119538~exp=1723123138~hmac=07e5a75bfe0d13b0a2248b7c681d083365415055c932114019323868d8a4d24d&w=900"
-                    alt="fish" width="396">
-
-                <h2>Fish</h2>
-                <p>Fish are aquatic vertebrates found in both freshwater and marine environments. They are characterized
-                    by gills, fins, and scales, which help them thrive in water. Fish come in a vast range of sizes,
-                    shapes, and colors, with over 30,000 species identified. They are an essential part of aquatic
-                    ecosystems, playing roles as predators and prey. Fish are cold-blooded and primarily breathe through
-                    gills. They reproduce in various ways, with some laying eggs and others giving live birth.</p>
-            </div>
+    <div class="top">
+        <div class="item item1">
+            <p>Download <strong>UltraEdit</strong> for Windows&nbsp; &nbsp; 
+                <a href="https://www.g2.com/products/ultraedit/reviews/" target="__blank">
+                    <img src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" width="112" height="32" alt="Reviews">
+                </a>
+            </p>
         </div>
-
-        <!-- box -->
-        <div class="box">
-            <p>A jungle is a dense, tropical forest characterized by thick vegetation, high biodiversity, and a warm,
-                humid climate. These ecosystems are typically found in equatorial regions, such as the Amazon Basin, the
-                Congo Basin, and Southeast Asia. Jungles are home to a vast array of plant and animal species, many of
-                which are unique and adapted to the specific conditions of the environment. The dense canopy of trees
-                often blocks sunlight, creating a dark and moist understory. Jungles play a crucial role in the Earth's
-                ecology, serving as carbon sinks, regulating climate, and supporting indigenous communities. However,
-                they are also under threat from deforestation and human encroachment, leading to the loss of
-                biodiversity and other environmental impacts.</p>
-            <a target="_blank" href="https://www.youtube.com/results?search_query=jungle">Click here to learn more</a>
+        <div class="item item2">
+            <p>Download and try UltraEdit before you buy it! This download includes the full Windows version of the text editor.</p>
         </div>
-
-        <!-- footer -->
-
-        <div class="fixed-circle">
-            <img src="https://t4.ftcdn.net/jpg/01/66/10/03/240_F_166100342_KbTGIRrnrlwGDZSXSMpH3zfn2dxyTKae.jpg"
-                alt="cirular image" width="90px">
+        <div class="item item3">
+            <button><a href="/downloads/uex-thank-you/">Download Mac or Linux version</a></button>
         </div>
-
-        <footer>
-            <p>© 2024 Zoomedia. All rights reserved.</p>
-        </footer>
     </div>
+
+    <footer></footer>
 </body>
 
 </html>
